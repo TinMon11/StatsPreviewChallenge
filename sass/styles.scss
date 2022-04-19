@@ -1,0 +1,110 @@
+/*Normaliza*/
+* {
+  box-sizing: border-box;
+  margin: 0px;
+}
+
+/* Variables */
+
+$ColorFondo: hsl(233, 47%, 7%);
+$ColorCard: hsl(244, 38%, 16%);
+$ColorDestacado: hsl(277, 64%, 61%);
+
+$ColorTitulos: hsl(0, 0%, 100%);
+$ColorDestacados: hsla(0, 0%, 100%, 0.75);
+$StatsColor: hsla(0, 0%, 100%, 0.6);
+
+$TamañoFuente: 15px;
+
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Lexend+Deca&display=swap");
+
+$Fuente: Inter;
+$Fuente2: Lexend Deca;
+
+/*Helpers*/
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+/*ESTILO HOME*/
+
+.homepage {
+  height: 100vh;
+  background-color: $ColorFondo;
+  font-family: $Fuente;
+  justify-content: center;
+  align-items: center;
+  color: $ColorTitulos;
+
+  &__main {
+    background-color: $ColorCard;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: 60%;
+    flex-wrap: nowrap;
+  }
+}
+
+.datos {
+  margin: 80px;
+  flex-basis: 40%;
+
+  &__titulo {
+    font-size: 1.1em;
+  }
+
+  &__descripcion {
+    color: $ColorDestacados;
+    width: 80%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    h2 {
+      font-weight: 200;
+      font-size: 0.9em;
+    }
+  }
+
+  &__stats {
+    justify-content: space-between;
+    margin-top: 100px;
+    width: 80%;
+
+    &__numbers {
+      font-family: $Fuente2;
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      h3 {
+        font-size: 1.4em;
+        margin-bottom: 5px;
+      }
+      p {
+        color: $StatsColor;
+        font-size: 0.8em;
+        font-weight: lighter;
+      }
+    }
+  }
+}
+
+.imagen {
+  flex-basis: 50%;
+
+  img {
+    height: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
